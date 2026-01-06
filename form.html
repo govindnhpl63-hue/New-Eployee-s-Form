@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form - Nainani Healthcare Pvt. Ltd.</title>
+    <style>
+        <!-- style code 
+        -->
+        body
+        {
+        font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+        background:
+        #f4f6f8;
+        padding:
+        20px;
+        }
+        .form-container
+        {
+        max-width:
+        1100px;
+        margin:
+        auto;
+        background:
+        #ffffff;
+        padding:
+        25px;
+        border-radius:
+        8px;
+        box-shadow:
+        0
+        4px
+        12px
+        rgba(0,
+        0,
+        0,
+        0.08);
+        }
+        h1,
+        h2
+        {
+        text-align:
+        center;
+        margin-bottom:
+        10px;
+        }
+        h1
+        {
+        font-size:
+        22px;
+        text-transform:
+        uppercase;
+        }
+        h2
+        {
+        font-size:
+        16px;
+        font-weight:
+        normal;
+        margin-bottom:
+        25px;
+        }
+        .section-title
+        {
+        margin-top:
+        30px;
+        margin-bottom:
+        10px;
+        font-weight:
+        bold;
+        border-bottom:
+        2px
+        solid
+        #333;
+        padding-bottom:
+        5px;
+        }
+        .grid
+        {
+        display:
+        grid;
+        grid-template-columns:
+        repeat(3,
+        1fr);
+        gap:
+        15px;
+        }
+        .grid-2
+        {
+        display:
+        grid;
+        grid-template-columns:
+        repeat(2,
+        1fr);
+        gap:
+        15px;
+        }
+        .grid-4
+        {
+        display:
+        grid;
+        grid-template-columns:
+        repeat(4,
+        1fr);
+        gap:
+        10px;
+        }
+        label
+        {
+        font-size:
+        13px;
+        font-weight:
+        bold;
+        margin-bottom:
+        4px;
+        display:
+        block;
+        }
+        input,
+        select,
+        textarea
+        {
+        width:
+        100%;
+        padding:
+        8px;
+        border:
+        1px
+        solid
+        #ccc;
+        border-radius:
+        4px;
+        font-size:
+        10px;
+        }
+        textarea
+        {
+        resize:
+        vertical;
+        min-height:
+        60px;
+        }
+        table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        margin-top:
+        10px;
+        }
+        table
+        th,
+        table
+        td
+        {
+        border:
+        1px
+        solid
+        #ccc;
+        padding:
+        8px;
+        font-size:
+        13px;
+        text-align:
+        center;
+        }
+        table
+        th
+        {
+        background:
+        #f0f0f0;
+        }
+        .checkbox-group
+        label
+        {
+        font-weight:
+        normal;
+        display:
+        inline-block;
+        margin-right:
+        20px;
+        }
+        .signature
+        {
+        margin-top:
+        40px;
+        display:
+        flex;
+        justify-content:
+        space-between;
+        }
+        .signature
+        div
+        {
+        width:
+        45%;
+        border-top:
+        1px
+        solid
+        #000;
+        text-align:
+        center;
+        padding-top:
+        5px;
+        font-size:
+        13px;
+        }
+        table
+        {
+        border-collapse:
+        collapse;
+        width:
+        100%;
+        }
+        table
+        td,
+        table
+        th
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        4px;
+        height:
+        32px;
+        }
+        table
+        input
+        {
+        width:
+        100%;
+        height:
+        26px;
+        border:
+        none;
+        outline:
+        none;
+        padding:
+        2px
+        4px;
+        box-sizing:
+        border-box;
+        font-size:
+        12px;
+        background:
+        transparent;
+        }
+        /*
+        =====
+        COMMON
+        FORM
+        TABLE
+        STYLE
+        =====
+        */
+        .form-table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        margin-top:
+        8px;
+        font-size:
+        12px;
+        }
+        .form-table
+        th,
+        .form-table
+        td
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        4px
+        6px;
+        height:
+        26px;
+        vertical-align:
+        middle;
+        }
+        /*
+        Headings
+        line
+        */
+        .section-title
+        {
+        font-weight:
+        bold;
+        margin-top:
+        18px;
+        border-bottom:
+        1px
+        solid
+        #000;
+        padding-bottom:
+        3px;
+        }
+        /*
+        Inputs
+        inside
+        table
+        (invisible
+        border)
+        */
+        .form-table
+        input[type="text"],
+        .form-table
+        input[type="date"],
+        .form-table
+        textarea
+        {
+        width:
+        100%;
+        border:
+        none;
+        outline:
+        none;
+        background:
+        transparent;
+        font-size:
+        12px;
+        padding:
+        2px
+        4px;
+        box-sizing:
+        border-box;
+        }
+        /*
+        Textarea
+        fixed
+        height
+        like
+        image
+        */
+        .form-table
+        textarea
+        {
+        resize:
+        none;
+        height:
+        50px;
+        }
+        /*
+        Checkbox
+        center
+        aligned
+        */
+        .form-table
+        input[type="checkbox"]
+        {
+        width:
+        14px;
+        height:
+        14px;
+        display:
+        block;
+        margin:
+        auto;
+        }
+        /*
+        Signature
+        line
+        */
+        .signature-row
+        {
+        margin-top:
+        25px;
+        display:
+        flex;
+        justify-content:
+        space-between;
+        }
+        .signature-box
+        {
+        width:
+        40%;
+        text-align:
+        center;
+        border-top:
+        1px
+        solid
+        #000;
+        padding-top:
+        5px;
+        font-size:
+        12px;
+        }
+        .table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        margin-top:
+        10px;
+        }
+        .table
+        th,
+        .table
+        td
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        4px
+        6px;
+        height:
+        28px;
+        font-size:
+        12px;
+        vertical-align:
+        middle;
+        }
+        .table
+        input[type="text"],
+        .table
+        input[type="date"]
+        {
+        width:
+        100%;
+        height:
+        24px;
+        border:
+        none;
+        outline:
+        none;
+        padding:
+        2px
+        4px;
+        box-sizing:
+        border-box;
+        background:
+        transparent;
+        font-size:
+        12px;
+        }
+        .table
+        input[type="checkbox"]
+        {
+        width:
+        14px;
+        height:
+        14px;
+        margin:
+        auto;
+        display:
+        block;
+        }
+        .address-cell
+        {
+        height:
+        60px;
+        }
+        .address-cell
+        {
+        height:
+        60px;
+        }
+        /*
+        =====
+        RESET
+        =====
+        */
+        *
+        {
+        box-sizing:
+        border-box;
+        font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+        }
+        /*
+        =====
+        SECTION
+        TITLE
+        =====
+        */
+        .section-title
+        {
+        font-size:
+        13px;
+        font-weight:
+        bold;
+        margin:
+        15px
+        0
+        5px;
+        padding-bottom:
+        3px;
+        border-bottom:
+        1px
+        solid
+        #000;
+        }
+        /*
+        =====
+        MAIN
+        TABLE
+        STYLE
+        =====
+        */
+        .ref-table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        margin-bottom:
+        12px;
+        font-size:
+        12px;
+        }
+        .ref-table
+        th,
+        .ref-table
+        td
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        6px
+        8px;
+        height:
+        28px;
+        vertical-align:
+        middle;
+        }
+        /*
+        Center
+        heading
+        row
+        */
+        .ref-table
+        .center
+        {
+        text-align:
+        center;
+        font-weight:
+        bold;
+        }
+        /*
+        =====
+        INPUT
+        STYLE
+        (Invisible
+        like
+        printed
+        form)
+        =====
+        */
+        .ref-table
+        input[type="text"],
+        .ref-table
+        input[type="date"],
+        .ref-table
+        textarea
+        {
+        width:
+        100%;
+        border:
+        none;
+        outline:
+        none;
+        background:
+        transparent;
+        font-size:
+        12px;
+        }
+        /*
+        Textarea
+        fixed
+        height
+        */
+        .ref-table
+        textarea
+        {
+        resize:
+        none;
+        height:
+        60px;
+        }
+        /*
+        =====
+        CHECKBOX
+        STYLE
+        =====
+        */
+        .ref-table
+        input[type="checkbox"]
+        {
+        width:
+        14px;
+        height:
+        14px;
+        display:
+        block;
+        margin:
+        auto;
+        }
+        /*
+        =====
+        SOURCE
+        OF
+        VACANCY
+        TABLE
+        =====
+        */
+        .vacancy-table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        font-size:
+        12px;
+        margin-bottom:
+        12px;
+        }
+        .vacancy-table
+        td
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        6px;
+        }
+        .vacancy-table
+        td:last-child
+        {
+        width:
+        50px;
+        text-align:
+        center;
+        }
+        /*
+        =====
+        RULES
+        TEXT
+        =====
+        */
+        .rules
+        {
+        font-size:
+        11px;
+        line-height:
+        1.4;
+        }
+        /*
+        =====
+        SIGNATURE
+        =====
+        */
+        .signature
+        {
+        margin-top:
+        25px;
+        }
+        .signature-line
+        {
+        display:
+        flex;
+        justify-content:
+        space-between;
+        margin-top:
+        25px;
+        }
+        .signature-box
+        {
+        width:
+        40%;
+        text-align:
+        center;
+        border-top:
+        1px
+        solid
+        #000;
+        padding-top:
+        4px;
+        font-size:
+        12px;
+        }
+        /*
+        =====
+        REFERENCE
+        FORM
+        FIX
+        =====
+        */
+        .reference-wrapper
+        {
+        max-width:
+        1100px;
+        /*
+        same
+        as
+        main
+        form
+        */
+        margin:
+        30px
+        auto
+        0;
+        }
+        .reference-title
+        {
+        text-align:
+        center;
+        font-weight:
+        bold;
+        font-size:
+        16px;
+        margin-bottom:
+        6px;
+        text-decoration:
+        underline;
+        }
+        .ref-table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        font-size:
+        12px;
+        }
+        .ref-table
+        td,
+        .ref-table
+        th
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        6px;
+        height:
+        30px;
+        vertical-align:
+        middle;
+        }
+        .ref-table
+        input
+        {
+        width:
+        100%;
+        border:
+        none;
+        outline:
+        none;
+        background:
+        transparent;
+        font-size:
+        12px;
+        }
+        /*
+        Bottom
+        verifier
+        boxes
+        */
+        .ref-sign
+        {
+        display:
+        flex;
+        justify-content:
+        space-between;
+        margin-top:
+        20px;
+        }
+        .ref-sign
+        div
+        {
+        width:
+        45%;
+        border:
+        1px
+        solid
+        #000;
+        text-align:
+        center;
+        padding:
+        20px
+        10px;
+        font-size:
+        12px;
+        }
+        /*
+        =====
+        SAME
+        WIDTH
+        AS
+        REFERENCE
+        FORM
+        =====
+        */
+        .reference-wrapper,
+        .kyc-wrapper
+        {
+        max-width:
+        900px;
+        /*
+        🔥
+        SAME
+        AS
+        RED
+        PART
+        */
+        margin:
+        auto;
+        }
+        /*
+        =====
+        KYC
+        TABLE
+        CONTROL
+        =====
+        */
+        .kyc-table
+        {
+        width:
+        100%;
+        border-collapse:
+        collapse;
+        table-layout:
+        fixed;
+        /*
+        VERY
+        IMPORTANT
+        */
+        font-size:
+        11px;
+        }
+        .kyc-table
+        th,
+        .kyc-table
+        td
+        {
+        border:
+        1px
+        solid
+        #000;
+        padding:
+        3px
+        4px;
+        height:
+        24px;
+        /*
+        COMPACT
+        HEIGHT
+        */
+        vertical-align:
+        middle;
+        }
+        /*
+        Column
+        width
+        fix
+        */
+        .kyc-table
+        th:nth-child(1),
+        .kyc-table
+        td:nth-child(1)
+        {
+        width:
+        6%;
+        text-align:
+        center;
+        }
+        .kyc-table
+        th:nth-child(2),
+        .kyc-table
+        td:nth-child(2)
+        {
+        width:
+        54%;
+        }
+        .kyc-table
+        th:nth-child(3),
+        .kyc-table
+        td:nth-child(3)
+        {
+        width:
+        25%;
+        }
+        .kyc-table
+        th:nth-child(4),
+        .kyc-table
+        td:nth-child(4)
+        {
+        width:
+        15%;
+        text-align:
+        center;
+        }
+        /*
+        Checkbox
+        perfect
+        */
+        .kyc-table
+        input[type="checkbox"]
+        {
+        width:
+        13px;
+        height:
+        13px;
+        margin:
+        auto;
+        display:
+        block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button onclick="window.print()"
+        style="position:fixed; top:20px; right:20px; padding:10px 18px; font-size:14px; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer; z-index:1000;">Print
+        Form</button>
+
+    <div class="form-container">
+        <h1>Nainani Healthcare Private Limited</h1>
+        <h2>P.No-B(91), B. IPIA, Road No-4, Kota, Rajasthan</h2>
+
+        <h1>Application Form</h1>
+
+        <div class="section-title">Personal Details</div>
+        <div class="grid">
+            <div><label>Employee Name</label><input type="text"></div>
+            <div><label>Form No.</label><input type="text"></div>
+            <div><label>Floor</label><input type="text"></div>
+
+            <div><label>Father’s / Husband’s Name</label><input type="text"></div>
+            <div><label>Relation</label><input type="text"></div>
+            <div><label>Date of Birth</label><input type="date"></div>
+
+            <div><label>Age</label><input type="number"></div>
+            <div><label>Gender</label><select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select></div>
+            <div><label>Religion</label><input type="text"></div>
+
+            <div><label>Marital Status</label><input type="text"></div>
+            <div><label>Blood Group</label><input type="text"></div>
+            <div><label>Nationality</label><input type="text"></div>
+
+            <div><label>Native Place</label><input type="text"></div>
+            <div><label>City</label><input type="text"></div>
+            <div><label>Pincode</label><input type="text"></div>
+
+            <div><label>Contact No. 1</label><input type="text"></div>
+            <div><label>Contact No. 2</label><input type="text"></div>
+            <div><label>Email ID</label><input type="email"></div>
+        </div>
+
+        <div class="section-title">Address & Identity</div>
+        <div class="grid-2">
+            <div><label>Present Address</label><textarea></textarea></div>
+            <div><label>Permanent Address</label><textarea></textarea></div>
+
+            <div><label>Aadhar Card Number</label><input type="text"></div>
+            <div><label>PAN Card Number</label><input type="text"></div>
+        </div>
+
+        <div class="section-title">Job Details</div>
+        <div class="grid-2">
+            <div><label>Position / Department Applied For</label><input type="text"></div>
+            <div><label>Date of Joining</label><input type="date"></div>
+        </div>
+
+        <div class="section-title">Academic Background</div>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Class / Degree</th>
+                <th>Year of Completion</th>
+                <th>Board / University</th>
+                <th>% / Grade</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <div class="section-title">Family Details</div>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Relation</th>
+                <th>Occupation</th>
+                <th>Dependent (Yes/No)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+
+        </table>
+
+        <div class="section-title">Medical / Legal Declaration</div>
+        <table>
+            <tr>
+                <th>Particular</th>
+                <th>Yes / No</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Have you any pre-existing medical condition / illness?</td>
+                <td><input type="checkbox"> Yes <input type="checkbox"> No</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Do you suffer from any physical disability / defect?</td>
+                <td><input type="checkbox"> Yes <input type="checkbox"> No</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Have you ever been convicted criminal offence?</td>
+                <td><input type="checkbox"> Yes <input type="checkbox"> No</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <div class="section-title">Experience Details</div>
+        <table>
+            <tr>
+                <th>Total Years of Experience</th>
+                <th>Fresher</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="checkbox"> Yes</td>
+            </tr>
+        </table>
+
+        <div class="section-title">Past Employment Details (Max 5)</div>
+        <table>
+            <tr>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Employer</th>
+                <th>Job Title</th>
+                <th>Salary</th>
+                <th>Reason for Change</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+
+
+            </tr>
+
+        </table>
+
+        <div class="section-title">Source of Vacancy Information</div>
+        <table>
+            <tr>
+                <td>Through Newspaper</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Through Job Site</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Through Social Site</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Through Friend Circle</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Through Our Company’s Employee</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Through Consultant</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+
+        <div class="section-title">Please give the details</div>
+        <textarea style="width:100%; min-height:60px"></textarea>
+
+        <div class="section-title">Rules</div>
+        <p style="font-size:13px">
+            1. No payment will be provided during the training period (15–20 days).<br>
+            2. If the position does not meet your expectations, you may choose to discontinue within the first 2 days of
+            joining.<br>
+            3. If you intend to leave the company after working for 2–3 months, you must inform HR at least one month in
+            advance.<br>
+            4. No tobacco is allowed on company premises; a fine of ₹200 will be imposed.
+        </p>
+
+        <div class="section-title">Signature</div>
+        <div class="signature">
+            <div>Date</div>
+            <div>Signature of Applicant</div>
+        </div>
+        <div>Signature of Applicant</div>
+    </div>
+
+    </div>
+
+    <!-- ================= REFERENCE FORM ================= -->
+
+
+    <div class="reference-wrapper">
+
+        <div class="reference-title">REFERENCE FORM</div>
+
+        <table class="ref-table">
+            <tr>
+                <td style="width:30%">Applicant Name</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Position – Department applied for</td>
+                <td colspan="2"><input type="text"></td>
+                <td style="width:20%">Floor <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center; font-weight:bold">
+                    From : Guarantor
+                </td>
+            </tr>
+
+            <tr>
+                <td>Name of Referee</td>
+                <td colspan="2"><input type="text"></td>
+                <td>Designation <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Contact No.</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td colspan="3" style="height:60px">
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
+
+        <div class="ref-sign">
+            <div>
+                <b>Pinkesh Prajapati</b><br>
+                (Sr. Document Verifier)
+            </div>
+            <div>
+                <b>Jaswant Vaishnav</b><br>
+                (Reference Verifier)
+            </div>
+        </div>
+
+    </div>
+
+    </table>
+
+
+
+    <!-- ================= DOCUMENT SUBMITTED ================= -->
+    <div class="kyc-wrapper">
+        <table class="kyc-table">
+
+
+            <table class="table">
+                <tr>
+                    <th>S.No</th>
+                    <th>KYC DOCUMENTS</th>
+                    <th>RECEIPT DATE</th>
+                    <th>DOCUMENT SUBMITTED</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>AADHAR CARD (MOBILE NO LINK)</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>PAN CARD</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>BANK DIARY</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>POLICE VERIFICATION</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>OLD UAN NO.</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>RDC (MOOL NIWAS)</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>JAN AADHAR</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>GURANTEE (REFERENCE)</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>ONE PASSPORT SIZE PHOTO</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>EDUCATION QUALIFICATION</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>VOTER ID</td>
+                    <td><input type="text"></td>
+                    <td style="text-align:center"><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="height:60px;"><b>BHAVYA MATANI</b><br>(HR & OFFICE MANAGER)</td>
+                </tr>
+            </table>
+            <!-- KYC rows -->
+        </table>
+    </div>
+</body>
+
+</html>
